@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang=”pt-br” xmlns:th="http://thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!---FONTES--->
+    <link href="https://fonts.googleapis.com/css2?family=Asap&family=Nunito:wght@200&family=Yellowtail&display=swap" rel="stylesheet">  
+
+    <!-- - <link rel="stylesheet" href="text/css" href="css/normalize.css">-->
+    <!----CSS---->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+        <title>Hunter Volunter | Inicio</title>
+</head>
+<body>
+    <nav>
+        <ul>
+        <a href="/" id="logo">Hunter Volunter</a>
+       <li><a href="#sobre">Sobre</a> </li>
+       <li><a href="/projetos">Projetos</a></li> 
+       <li><a href="#contato">Contato</a></li>
+       <li><a href="/login">Login</a></li>
+       <li><a href="/cadastro">Cadastro</a></li>
+
+
+       
+    </ul>
+
+    
+
+    </nav>
+
+    <header id="topo">
+        <h1>Independente do órgão, entidade, empresa! <br> Seja você o motivo da sua busca</h1>
+        <p> Tecnologia, Saúde, startups, palestras, aulas encontre projetos e empresas para gerar e compartilhar conhecimento e mudar o mundo.
+        </p>
+            <a href="#servicos" class="botao">Ver mais</a>
+    </header>
+    <section id="sobre">
+        <h2>Sobre</h2>
+        <p>Somos uma pequena empresa pensada estrategicamente em fazer ponte entre voluntarios e o mundo de negócios/ongs/comunidades.<br>
+            Pensado na necessidade de gerar oportunidade de mercado para aqueles que não possuem a "prática", pensado para ongs que 
+            necessitam de algum tipo de apoio e não tem meio de divulgação de seu projeto, de sua necessidade. <br>
+            Damos as empresas/ongs nossa plataforma como ponte para o voluntário. <br>
+            Damos aos voluntários e entidades a oportunidade de ajudar e ser ajudado. <br>
+            Fundada desde 2022 no projeto técnico de Web da escola Senai. 
+        
+        </p>
+             <a href="#sobre"class="botao">Confira aqui</a>
+    </section>
+    <section id="servicos">
+        <div>
+            <form method="post">
+                 
+            <h2>Pequisa</h2>
+           <h3> Categoria de serviço: </h3>         
+					<select name="categoria" required>
+						<option value="">Escolher...</option>
+						<option value="tecnologia" id="tecnologia" name="tecnologia">Tecnologia</option>
+						<option value="saude" id="saude" name="saude">Saúde</option>
+						<option value="estetica" id="estetica" name="estetica">Estética</option>
+						<option value="esporte" id="esporte" name="esporte">Esporte</option>
+						<option value="ensino" id="ensino" name="ensino">Ensino</option>
+						<option value="marketing" id="marketing" name="marketing">Marketing</option>
+						<option value="arrecadacao" id="arrecadacao" name="arrecadacao">Arrecadação</option>
+						<option value="utilidades" id="utilidades" name="utilidades">Utilidades</option>
+						<option value="inclusao" id="inclusao" name="inclusao">Inclusão</option>
+					</select>
+
+            <input class="buscar" type="search"
+									placeholder="Insira sua pesquisa..." aria-label="Pesquisar" name="pesquisar"
+									id="pesquisar" required>
+
+         <button type="submit" class="botao">Pesquisar</button>
+         
+          </div>
+            </form>
+       <div>
+        <table>
+          
+						<h4><i><span th:text="${mensagem}"></span></i></h4></span>
+			
+			
+          <tbody>
+								<tr th:each="projeto : ${projetos}">
+<!-- 									<td><a th:href="${(#mvc.url('PC#projetos').arg(0,projeto.id)).build()}">
+ -->									<span th:text="${projeto.nome}"> </span> <a href="\projetos" style="text-decoration:none"><span th:text="${projeto.categoria}"></a> </span>
+ 										
+  								
+								</tr>
+            </tbody>
+        </table>
+
+       </div>
+        
+        
+    </section>
+    <a href="/projetos"><section id="projetos">
+        <h2>Projetos realizados</h2>
+        <img src="assets/volunter1.jpg" alt="voluntarios">
+        <img src="assets/volunter2.jpg" alt="voluntarios">
+        <img src="assets/volunter3.jpg" alt="voluntarios">
+        <img src="assets/volunter4.jpg" alt="voluntarios">
+        <img src="assets/volunter5.jpg" alt="voluntarios">
+        <img src="assets/volunter6.jpg" alt="voluntarios">
+    </section></a>
+
+    <section id="contato">
+        <h2>Contato</h2>
+        <p>Vem falar com a gente!</p>
+
+        <div>
+            <img src="assets/tel.png">
+            <p><a href="tel:9854554875">(87)5465446454</a></p>
+        </div>
+        <div>
+            <img src="assets/mail.png" alt="email" >
+            <p><a href="mailto:contato@teste.com">contato@teste.com</a></p>
+        </div>
+        <div>
+            <img src="assets/insta.png" alt="instagram" >
+            <p><a href="#">@HunterVolunter</a></p>
+        </div>
+        
+    </section>
+
+    <footer>
+        <a href="#topo">Voltar</a>
+        <p> © 2022 Copyright: Bianca</p>
+    </footer>
+</body>
+</html>

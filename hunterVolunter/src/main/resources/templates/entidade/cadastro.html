@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang=”pt-br” xmlns:th="http://thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hunter Volunter | Cadastro</title>
+    <!----fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Asap&family=Nunito:wght@200&family=Yellowtail&display=swap" rel="stylesheet">  
+    <!----style-->
+    <link rel="stylesheet" type="text/css" href="/css/form.css">
+</head>
+<body>
+    <div class="caixa">
+    <form method="post">
+        <fieldset>
+            <legend><b>Cadastro | Hunter Volunter</b></legend>
+            <br>
+            <div class="inputCaixa">
+                <input type="text" name="nomeVoluntario" id="nomeVoluntario" class="inputUsuario" required>
+                <label for="nomeVoluntario" class="labelinput">Nome:</label>
+            </div>
+            <br>
+            <div class="inputCaixa">
+                <input type="text" name="email" id="email" class="inputUsuario" required>
+                <label for="nome" class="labelinput">E-mail:</label>
+            </div>
+            <br>
+
+            <div class="inputCaixa">
+                <input type="text" name="telefone" id="telefone" class="inputUsuario" required>
+                <label for="telefone" class="labelinput">Telefone:</label>
+            </div>
+            <br>
+
+            <div class="inputCaixa">
+                <input type="text" name="identificacao" id="identificacao" class="inputUsuario" required>
+                <label for="identificacao" class="labelinput">Cpf/Cnpj:</label>
+            </div>
+            <br>
+
+            <div class="inputCaixa">
+                <p>Modelo:</p>
+                <input type="radio" name="modelo" value="presencial" id="presencial" required><label for="presencial">Presencial</label><br>
+                <input type="radio" name="modelo" value="online" id="online" required><label for="online">On-line</label><br>
+                <input type="radio" name="modelo" value="doacao" id="doacao" required><label for="doacao">Doação</label><br>
+          </div>
+          
+          <br>
+            <label for="datanascimento"><b>Data de Nascimento:</b></label>
+            <input type="date" name="datanascimento" id="datanascimento" required>
+        <br>
+         <br>
+
+        <div class="inputCaixa">
+            <input type="text" name="endereco" id="endereco" class="inputUsuario" required>
+            <label for="endereco" class="labelinput">Endereco:</label>
+        </div>
+        <br>
+
+
+        <div class="inputCaixa">
+            <input type="password" name="senha" id="senha" class="inputUsuario" required>
+            <label for="senha" class="labelinput">Senha:</label>
+        </div>
+        <br>
+
+
+        <div class="inputCaixa">
+            <input type="text" name="estado" id="estado" class="inputUsuario" required>
+            <label for="endereco" class="labelinput">Estado:</label>
+        </div>
+
+
+        <div class="inputCaixa">  
+            <p>Interesse em:</p>
+            <select name="interesse" required>
+                <option name="Escolher" selected >Escolher...</option>
+                <option name="projeto" id="projeto"value="projeto">Divulgar projeto</option>
+                <option name="voluntario" id="voluntario"value="voluntario">Ser voluntario</option>
+            </select>
+            <br>
+
+            <br>
+
+            <input type="submit" name="submit" id="submit"></input>
+            
+        </fieldset>
+    </form>    
+    </div>
+</body>
+</html>

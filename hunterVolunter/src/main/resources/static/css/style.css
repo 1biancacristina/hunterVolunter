@@ -1,0 +1,373 @@
+html{
+    box-sizing: border-box;
+}
+body{
+    font-family: Nunito, sans-serif;
+    color: #1c1c1c;
+}
+
+h1, h2,h3{
+    font-family: Asap, sans-serif;
+    color: #000000;
+}
+
+#submit {
+	width: 100%;
+}
+.botao{
+    color:#FFFFFF;
+    text-decoration: none;
+    padding: 10px 30px;
+    background-color:steelblue;
+    font-size: .9em;
+    border-radius: 3px;
+}
+
+/* Navegação */
+
+nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: steelblue;
+    font-weight: bold;
+}
+
+#logo{
+    text-decoration: none;
+    color:#FFFFFF;
+    font-weight: 800;
+    font-size: 28px;
+    font-family:Yellowtail, serif;
+}
+nav  a { 
+    text-decoration: none;
+    color:#FFFFFF;
+
+}
+
+nav ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+
+nav ul li{
+    text-align: center;
+    width: 100%;
+}
+
+nav ul li a{
+    display: inline-block;
+    padding: 10px 0;
+}
+
+/*Cabeçalho*/
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("/assets/camera.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color:#ffffff;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    color: #ffffff;
+}
+
+header p{
+    margin-bottom: 2em;
+}
+
+#sobre{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px 60px 60px 20px;
+    background-color: steelblue;
+    color:#ffffff;
+    
+}
+
+#sobre h2{
+    color:#FFFFFF
+}
+
+#sobre p{
+    margin-bottom: 2.5em;
+    max-width: 1500px;
+}
+
+#sobre .botao{
+    background-color: #f1f1f1;
+    color: #000000;
+    font-weight: bold;
+    justify-content: space-between;
+    
+}
+
+/*Serviços**/
+
+
+#servicos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+}
+
+#servicos div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 30px;   
+}
+
+/**projetos*/
+
+#projetos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+
+#projetos h2{
+    margin-bottom: 20px;
+    text-decoration: none;
+}
+
+#projetos img{
+    width: 100%;
+}
+
+/*Contato*/
+
+#contato{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+        margin-top: 50px;
+}
+
+#contato h2 {
+    color: #000000
+}
+/**Rodape*/
+
+footer {
+    text-align: center;
+    padding:20px;
+    background-color: steelblue ;
+    color: #ffffff;
+}
+
+footer a {
+    text-decoration: none;
+    color: #00ffff;
+    width: 100%;
+    
+}
+     /*form pesquisa*/  
+     form select {
+        font-size: 1em;
+        border-radius: 0.2em;
+        border:transparent ;
+        color: #f1f1f1;
+        padding: 0.2em;
+        font-family: Nunito;
+        background-color: steelblue;
+        align-items: flex-end;
+        width: 200px;
+        height: 30px;
+        font-weight: bold;
+
+    }
+
+    form .buscar {
+     font-size: 1em;
+     border-radius: 0.2em;
+     border:transparent ;
+     color: #f1f1f1;
+     margin: 20px;
+     padding: 0.2em;
+     font-family: Nunito;
+     height: 32px;
+     width: 100%;
+     margin: 2 rem auto;
+    }
+
+    input {
+     border: 1px solid black;
+     padding: 3px;
+     background-color: steelblue;
+     color: #fff;
+     font-weight: bold;
+
+   }
+
+    input:placeholder-shown {  /* Firefox 19+ */
+     color:#FFFFFF;
+     background-color: beige;
+     font-weight: bold;
+     border: 1px solid black;
+
+  }
+  
+  
+  .containter-empresa{
+      background-color: #000000;
+      display: flex;
+      
+  }
+
+  .container h1{
+      margin: 20px;
+      font-family: Asap, sans-serif;
+  }
+  .container{
+      flex-direction: column;
+      justify-content: center;
+     /*padding: 25px 200px 200px 300px;*/
+     margin-bottom: 200px;
+  }
+
+  .cor-bt{
+      background-color: steelblue;
+  }
+
+  .fonte{
+    font-family: Nunito, sans-serif;
+  }
+
+
+@media screen and (min-width: 768px) {
+    /*nav*/
+    nav { 
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    nav ul {
+        flex-direction: row;
+        width: 70%;
+    }
+
+    /*Cabeçalho**/
+
+    header {
+        height: 600px;
+        height: 60vh;
+        justify-content: center;
+    }
+
+    /*Sobre*/
+
+    #sobre {
+        height: 250px;
+        height: 30vh;
+        justify-content: center;
+        min-height: 250px;
+    }
+
+    /*serviços*/
+
+    #servicos {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        max-width: 1000px;
+        margin: 0 auto;
+
+    }
+
+    #servicos h2 {
+        text-align: center;
+        width: 100%;
+    }
+
+    #servicos div {
+        flex-grow: 1;
+        flex-basis: 150pc;
+        padding: 0 10px;
+    }
+
+    /*projetos*/
+    #projetos{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    #projetos h2{
+        width: 100%;
+        text-align:center;
+    }
+
+    #projetos img { 
+        width: 33.3333333%;
+    }
+   
+    #projetos{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+     /*contato*/
+    #contato h2, #contato p, #contato a{
+        width: 100%;
+        text-decoration: none;
+        color: #000000;
+        margin: 5px;
+       }
+
+       #contato{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        max-width: 500px;
+        margin: 0 auto;
+        
+    }
+
+    .containter-empresa{
+        background-color: #000000;
+        display: flex;
+        
+    }
+  
+    .container h1{
+        margin: 20px;
+        font-family: Asap, sans-serif;
+    }
+    .container{
+        flex-direction: column;
+        justify-content: center;
+        padding: 0px;
+  
+    }
+  
+    .cor-bt{
+        background-color: steelblue;
+    }
+  
+    .fonte{
+      font-family: Nunito, sans-serif;
+    }
+    
+     
+}

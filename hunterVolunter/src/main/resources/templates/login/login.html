@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang=”pt-br” xmlns:th="http://thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hunter Volunter | Login </title>
+
+    <link rel="stylesheet" type="text/css" href="css/login.css">
+</head>
+<body>
+    
+    <div class="login">
+        <h1>Login</h1>
+        <input type="text" id="email" name="email" placeholder="Usuario">
+        <br>
+        <br>
+        <input type="password" id="senha" name="senha" placeholder="Senha">
+        <br>
+        <br>
+        		<div th:if="${erro != null}" th:text="${erro}"class="alert alert-danger" role="alert"></div>
+        
+        <a href="/" class="botao" id="submit" style="text-decoration:none"  >Entrar</a>
+        
+    </div>
+
+
+</body>
+</html>

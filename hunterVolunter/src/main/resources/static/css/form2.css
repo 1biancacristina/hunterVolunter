@@ -1,0 +1,204 @@
+body{
+    font-family: Nunito, sans-serif;
+    color: #1c1c1c;
+    font-weight: bold;
+
+}
+
+h1, h2,h3{
+    font-family: Asap, sans-serif;
+    color: #000000;
+        font-weight: bold;
+
+}
+
+/* Navegação */
+
+nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: steelblue;
+    font-weight: bold;
+}
+
+#logo{
+    text-decoration: none;
+    color:#FFFFFF;
+    font-weight: 800;
+    font-size: 28px;
+    font-family:Yellowtail, serif;
+}
+nav  a { 
+    text-decoration: none;
+    color:#FFFFFF;
+
+}
+
+nav ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+
+nav ul li{
+    text-align: center;
+    width: 100%;
+}
+
+nav ul li a{
+    display: inline-block;
+    padding: 10px 0;
+}
+
+/*Cabeçalho*/
+
+.cabecalho{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    height: 20px;
+    color: #000000;
+ 
+}
+
+
+
+
+/*contato*/
+#contato h2, #contato p, #contato a{
+    width: 100%;
+    text-decoration: none;
+    color: #000000;
+    margin: 5px;
+   }
+   #contato{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 500px;
+    margin: 0 auto;
+    align-items: center;
+    padding-bottom: 30px;
+    text-align: center;
+    }
+    #contato h2 {
+    color: #000000
+}
+
+/*formulario*/
+
+.content-formulario{
+    padding:20px 150px 100px 20px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    text-align: center; 
+    display: block;
+    background-color: steelblue;
+}
+
+.inputUser{
+    background:none;
+    border:none;
+    border-bottom: 1px solid white ;
+    outline: none;
+    color: white;
+    font-size: 15px ;
+    width: 20%;
+    letter-spacing: 1px ;
+}
+
+
+
+
+#submit{
+    background-color:navy;
+    width: 10%;
+    border: none;
+    padding: 15px;
+    color: rgb(255, 251, 251);
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+#submit:hover{
+    background-color:honeydew;
+    color: #1c1c1c;
+}
+
+form select {
+    font-size: 1em;
+    border-radius: 0.2em;
+    color: #f1f1f1;
+    padding: 0.2em;
+    font-family: Nunito;
+    background-color: navy;
+    width: 200px;
+    height: 32px;
+    font-weight: bold;
+    border: 1px solid black;
+    border: none;
+    padding: 8px;
+    border-radius: 10px;
+    outline: none;
+    font-size: 15px;
+
+}
+  /**Rodape*/
+
+  footer {
+    text-align: center;
+    padding:10px;
+    background-color: steelblue ;
+    color: #ffffff;
+}
+
+footer a {
+    text-decoration: none;
+    color: #00ffff;
+}
+
+@media screen and (min-width: 768px) {
+    /*nav*/
+    nav { 
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    nav ul {
+        flex-direction: row;
+        width: 70%;
+    }
+
+    /*Cabeçalho**/
+
+    header {
+        height: 600px;
+        height: 60vh;
+        justify-content: center;
+    }
+
+         /*contato*/
+         #contato h2, #contato p, #contato a{
+            width: 100%;
+            text-decoration: none;
+            color: #000000;
+            margin: 5px;
+           }
+    
+           #contato{
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            max-width: 500px;
+            margin: 0 auto;
+            
+        }
+    }
