@@ -30,7 +30,6 @@
 <body>
 	<nav>
 		<ul>
-			<a href="/" id="logo">Hunter Volunter</a>
 			<li><a href="/">Home</a></li>
 			<li><a href="/projetos">Projetos</a></li>
 			<li><a href="/contato">Contatos</a></li>
@@ -52,23 +51,31 @@
 					class="table table-hover table-responsive w-auto table-striped">
 					<thead>
 						<tr class="head-options">
-							<th scope="col" class="fonte">Codigo:</th>
 							<th scope="col" class="fonte">Projeto:</th>
 							<th scope="col" class="fonte">Prazo:</th>
+							<!-- <th scope="col" class="fonte">Modelo:</th>
 							<th scope="col" class="fonte">Categoria de serviço:</th>
-							<th scope="col" class="fonte">Estado:</th>
-							<th scope="col" class="fonte">Status:</th>
+							<th scope="col" class="fonte">Status:</th> -->
+							<th scope="col" class="fonte">Telefone:</th>
+							<th scope="col" class="fonte">E-mail:</th>
+				<!-- 			<th scope="col" class="fonte">Endereço:</th>
+							<th scope="col" class="fonte">Cidade:</th>
+							<th scope="col" class="fonte">Estado:</th> -->
 
 						</tr>
 					</thead>
 					<tbody>
 						<tr class="head-options" th:each="projeto : ${projetos}">
-							<td><span th:text="${projeto.codigo}"></span></td>
 							<td><span th:text="${projeto.nome}"></span></td>
 							<td><span th:text="${projeto.prazo}"></span></td>
+			<!-- 				<td><span th:text="${projeto.modelo}"></span></td>
 							<td><span th:text="${projeto.categoria}"></span></td>
-							<td><span th:text="${projeto.estado}"></span></td>
-							<td><span th:text="${projeto.status}"></span></td>
+							<td><span th:text="${projeto.status}"></span></td> -->
+							<td><span th:text="${projeto.telefone}"></span></td>
+							<td><span th:text="${projeto.email}"></span></td>
+					<!-- 		<td><span th:text="${projeto.endereco}"></span></td>
+							<td><span th:text="${projeto.cidade}"></span></td>
+							<td><span th:text="${projeto.estado}"></span></td> -->
 
 
 							<td><a
@@ -77,11 +84,10 @@
 										type="button" class="btn btn-danger">Excluir</button></a></td>
 
 							<td><a
-								th:href="@{updateprojeto/?codigo=(${projeto.codigo})}">
+								th:href="${(#mvc.url('PC#updateProjeto').arg(0,projeto.codigo)).build()}">
 									<button type="button"
 										class="btn btn-primary waves-effect waves-light btn-small cor-bt">Editar</button>
 							</a></td>
-
 
 							<td><a href="/projeto">
 									<button type="button"

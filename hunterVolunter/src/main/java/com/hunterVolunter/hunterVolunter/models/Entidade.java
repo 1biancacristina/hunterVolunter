@@ -42,11 +42,7 @@ public class Entidade {
 	
 	@NotEmpty
 	private String interesse;
-	
-	/*
-	 * @OneToMany(mappedBy = "entidade", cascade = CascadeType.REMOVE) private
-	 * List<Projeto> projetos;
-	 */
+
 
 	public String getIdentificacao() {
 		return identificacao;

@@ -5,15 +5,15 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 
 import com.hunterVolunter.hunterVolunter.models.Projeto;
-/*import com.hunterVolunter.hunterVolunter.models.Entidade;*/
 
-public interface ProjetoRepository extends CrudRepository <Projeto, Long> { 
 
-	/* Iterable<Projeto> findByEntidade(Entidade entidade); */
+public interface ProjetoRepository extends CrudRepository <Projeto, String> { 
+
 	
-	Projeto findByNome(String nome);
 	Projeto findByCodigo(long codigo);
-	
+
+
+	/* Projeto findByNome(String nome); */
 
 
 	@Query(value = "select p from Projeto p where p.nome like %?1%")

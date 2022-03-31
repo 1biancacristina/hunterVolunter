@@ -78,20 +78,17 @@ public class EntidadeController {
 		return "login/login";
 	}
 	
-	@RequestMapping(value = "/perfil", method = RequestMethod.POST)	
-	public String form(Projeto projeto) { 
-	pr.save(projeto);
-	return "redirect:/perfil";
-		
-	}
-	
-	@RequestMapping("/perfil")
-	public ModelAndView listarProjeto() {
-		ModelAndView mv = new ModelAndView("perfil/perfil");
-		Iterable<Projeto>projetos = pr.findAll();
-		mv.addObject("projetos", projetos);
-		return mv;
-		
-	}
+	/*
+	 * @RequestMapping(value = "/perfil", method = RequestMethod.POST) public String
+	 * form(Projeto projeto) { pr.save(projeto); return "redirect:/perfil";
+	 * 
+	 * }
+	 * 
+	 * @RequestMapping("/perfil") public ModelAndView listarProjeto() { ModelAndView
+	 * mv = new ModelAndView("perfil/perfil"); Iterable<Projeto>projetos =
+	 * pr.findAll(); mv.addObject("projetos", projetos); return mv;
+	 * 
+	 * }
+	 */
 	
 }
