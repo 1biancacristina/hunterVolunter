@@ -53,7 +53,7 @@
             <form method="post">
                  
             <h2>Pequisa</h2>
-         <!--   <h3> Categoria de serviço: </h3>         
+           <h3> Categoria de serviço: </h3>         
 					<select name="categoria" required>
 						<option value="">Escolher...</option>
 						<option value="tecnologia" id="tecnologia" name="tecnologia">Tecnologia</option>
@@ -66,7 +66,7 @@
 						<option value="utilidades" id="utilidades" name="utilidades">Utilidades</option>
 						<option value="inclusao" id="inclusao" name="inclusao">Inclusão</option>
 					</select>
- -->
+
             <input class="buscar" type="search"
 									placeholder="Insira sua pesquisa..." aria-label="Pesquisar" name="pesquisar"
 									id="pesquisar" required>
@@ -82,10 +82,10 @@
 			
 			
           <tbody>
-	<!-- 							<tr th:each="projeto : ${projetos}">
-								<td><a th:href="${(#mvc.url('PC#projetos').arg(0,projeto.id)).build()}">
-							    <span th:text="${projeto.nome}"> </span> <a href="\projetos" style="text-decoration:none"><span th:text="${projeto.categoria}"></a> </span>
- 										 -->
+								<tr th:each="projeto : ${projetos}">
+<!-- 									<td><a th:href="${(#mvc.url('PC#projetos').arg(0,projeto.id)).build()}">
+ -->									<span th:text="${projeto.nome}"> </span> <a href="\projetos" style="text-decoration:none"><span th:text="${projeto.categoria}"></a> </span>
+ 										
   								
 								</tr>
             </tbody>

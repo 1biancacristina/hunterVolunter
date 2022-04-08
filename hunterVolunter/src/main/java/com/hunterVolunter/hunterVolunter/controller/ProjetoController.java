@@ -51,7 +51,7 @@ public class ProjetoController {
 		return "redirect:/projetos";
 	}
 
-	@RequestMapping(value = "/updateProjeto", method = RequestMethod.GET)
+	@RequestMapping(value = "updateProjeto", method = RequestMethod.GET)
 	public ModelAndView atualizarProjeto(long codigo)  {
 		Projeto projeto = pr.findByCodigo(codigo);
 		ModelAndView mv = new ModelAndView("projeto/projetoUpdate");
@@ -59,14 +59,15 @@ public class ProjetoController {
 		return mv;
 	}
 
-	@RequestMapping(value = "/updateProjeto", method = RequestMethod.POST)
+	@RequestMapping(value = "updateProjeto", method = RequestMethod.POST)
 	public String updateProjeto(@Valid Projeto projeto, BindingResult result, RedirectAttributes attributes) {
 		pr.save(projeto);
 		attributes.addFlashAttribute("sucess", "Atualizado com sucesso");
-
-	
+		
+		/*
+		 * long codigoLong = projeto.getCodigo(); String codigo = "" + codigoLong;
+		 */
 		return "redirect:/projetos";
-
 	}
 
 }

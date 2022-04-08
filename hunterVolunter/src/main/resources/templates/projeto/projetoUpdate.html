@@ -6,13 +6,12 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!---FONTES--->
+
 <link
 	href="https://fonts.googleapis.com/css2?family=Asap&family=Nunito:wght@200&family=Yellowtail&display=swap"
 	rel="stylesheet">
 
-<!-- <link rel="stylesheet" href="text/css" href="style/normalize.css"> -->
-<!----CSS---->
+
 <link rel="stylesheet" type="text/css" href="css/form2.css">
 <title>Hunter Volunter | Inicio</title>
 </head>
@@ -20,6 +19,7 @@
 <body>
 	<nav>
 		<ul>
+            <a href="/" id="logo">Hunter Volunter</a>
 			<li><a href="/">Home</a></li>
 			<li><a href="/contato">Contatos</a></li>
 			<li><a href="/projetos">Projetos</a></li>
@@ -29,30 +29,30 @@
 		</ul>
 	</nav>
 
-	<div class="box">
+	<div class="content-formulario">
 
 
 		<form method="post">
 			<div class="inputForm">
 				<label for="nome" class="labelinput">Nome:</label> <input
-					type="text" id="nome" class="inputUser" name="nome"
-					th:attr="value = ${projeto.nome}">
+					type="text" id="nome"name="nome"
+					th:attr="value = ${projeto.nome}" class="inputUser" >
 
-			</div>
-			<br>
+            </div>
+            <br>
 
 
 
 			<div class="inputForm">
 				<label for="prazo">Prazo</label><br> <input type="date"
 					placeholder="prazo" id="prazo" class="inputUser" name="prazo"
-					th:attr="value = ${projeto.prazo}" required> <br>
-				<br>
+					th:attr="value = ${projeto.prazo}" required> <br><br>
+			
 
 			</div>
-			<!-- 
+			
         <div class="inputForm">
-          <label>Modelo:</label>
+          <p>Modelo:</p>
           <br>
           <input type="radio"value="presencial" id="presencial"  name="modelo"  th:attr="value = ${projeto.modelo}"  required><label
             for="presencial">Presencial</label><br>
@@ -62,7 +62,7 @@
         <br>
 
         <div class="inputForm">
-          <label for="categoria" > Categoria de serviço: </label>
+          <p> Categoria de serviço: </p>
           <select name="categoria" th:attr="value = ${projeto.categoria}"required>
             <option value="">Escolher...</option>
             <option value="tecnologia" id="tecnologia" name="tecnologia">Tecnologia</option>
@@ -80,7 +80,7 @@
 
         
         <div class="inputForm">
-          <label for="status"> Status projeto: </label>
+          <p> Status projeto: </p>
           <select name="status"  th:attr="value = ${projeto.status}" required>
             <option value="">Escolher...</option>
             <option value="aberto" id="aberto" name="aberto">Aberto</option>
@@ -89,23 +89,23 @@
             <option value="urgente" id="urgente" name="urgente">Urgente</option>
           </select>
         </div>
-        <br>  -->
+        <br> 
 
 			<div class="inputForm">
 				<label for="telefone" class="labelinput">Telefone:</label> <input
-					type="text" id="telefone" class="inputUser" name="telefone"
-					th:attr="value = ${projeto.telefone}" required>
+					type="text" id="telefone"  name="telefone"
+					th:attr="value = ${projeto.telefone}" class="inputUser" required>
 			</div>
 			<br>
 
 			<div class="inputForm">
 				<label for="email" class="labelinput">E-mail:</label> <input
-					type="text" id="email" class="inputUser" name="email"
-					th:attr="value = ${projeto.email}" required>
+					type="text" id="email"  name="email"
+					th:attr="value = ${projeto.email}" class="inputUser" required>
 			</div>
 			<br>
 
-			<!--       <div class="inputCaixa">
+			      <div class="inputCaixa">
           <label for="endereco" class="labelinput">Endereco:</label>
           <input type="text"id="endereco" class="inputUser"  name="endereco"  th:attr="value = ${projeto.endereco}"  required>
         </div>
@@ -124,12 +124,12 @@
           <input type="text" id="estado" class="inputUser"  name="estado"  th:attr="value = ${projeto.estado}" required>
         </div>
         <br>
- -->
+
 
 
 			<br>
 
-			<button type="submit">Editar</button>
+			<button type="submit" id="submit">Editar</button>
 
 
 		</form>
@@ -137,7 +137,7 @@
 
 
 
-
+</div>
 
 
 

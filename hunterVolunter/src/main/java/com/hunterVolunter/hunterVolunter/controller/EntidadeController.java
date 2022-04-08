@@ -9,16 +9,13 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.hunterVolunter.hunterVolunter.models.Entidade;
-import com.hunterVolunter.hunterVolunter.models.Projeto;
 /*import com.hunterVolunter.hunterVolunter.models.Projeto;
 import com.hunterVolunter.hunterVolunter.repository.ProjetoRepository;
 import org.springframework.web.bind.annotation.PathVariable;*/
 import com.hunterVolunter.hunterVolunter.repository.EntidadeRepository;
-import com.hunterVolunter.hunterVolunter.repository.ProjetoRepository;
 
 
 @Controller
@@ -27,8 +24,6 @@ public class EntidadeController {
 	@Autowired
 	private EntidadeRepository er;
 	
-	@Autowired
-	private ProjetoRepository pr;
 
 	/*
 	 * @Autowired private ProjetoRepository pr;

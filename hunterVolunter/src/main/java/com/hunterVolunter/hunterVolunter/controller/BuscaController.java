@@ -35,7 +35,6 @@ public class BuscaController {
 
 			@RequestMapping( "/contato" )
 			public ModelAndView openContato(){
-				 //Retorna a view que deve ser chamada, no caso secundaria (secundaria.jsp) que esta dentro da pasta /home
 				return new ModelAndView("contato/contato");
 			}
 }

@@ -1,20 +1,26 @@
 package com.hunterVolunter.hunterVolunter.models;
 
+
 import java.io.Serializable;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.validation.constraints.NotEmpty;
+/*import javax.persistence.ManyToOne;
+*/import javax.validation.constraints.NotEmpty;
 
-
+/*import javax.persistence.ManyToOne;
+*/
 
 @Entity
 public class Projeto implements Serializable {
-	private static final long serrialVersionUID = 1L; 
+	
+	
+	private static final long serialVersionUID = 1L; 
+	
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long codigo;
 	
 	@NotEmpty
@@ -23,35 +29,36 @@ public class Projeto implements Serializable {
 	@NotEmpty
 	private String prazo;
 	
-	/*
-	 * @NotEmpty private String modelo;
-	 * 
-	 * @NotEmpty private String categoria;
-	 * 
-	 * @NotEmpty private String status;
-	 */
+	@NotEmpty
+	private String modelo;
+	
+	@NotEmpty
+	private String categoria;
+	
+	@NotEmpty
+	private String status;
+	
 	@NotEmpty
 	private String telefone;
 	
 	@NotEmpty
 	private String email;
-	/*
-	 * @NotEmpty private String endereco;
-	 * 
-	 * @NotEmpty private String cidade;
-	 * 
-	 * @NotEmpty private String estado;
-	 */
 	
-
+	@NotEmpty
+	private String endereco;
+	
+	@NotEmpty
+	private String cidade;
+	
+	@NotEmpty
+	private String estado;
+	
+	
+	/*
+	 * @ManyToOne private Entidade entidade;
+	 */
 	 
-	public long getCodigo() {
-		return codigo;
-	}
-
-	public void setCodigo(long codigo) {
-		this.codigo = codigo;
-	}
+	 
 
 	public String getNome() {
 		return nome;
@@ -69,19 +76,30 @@ public class Projeto implements Serializable {
 		this.prazo = prazo;
 	}
 
-	/*
-	 * public String getModelo() { return modelo; }
-	 * 
-	 * public void setModelo(String modelo) { this.modelo = modelo; }
-	 * 
-	 * public String getCategoria() { return categoria; }
-	 * 
-	 * public void setCategoria(String categoria) { this.categoria = categoria; }
-	 * 
-	 * public String getStatus() { return status; }
-	 * 
-	 * public void setStatus(String status) { this.status = status; }
-	 */
+	public String getModelo() {
+		return modelo;
+	}
+
+	public void setModelo(String modelo) {
+		this.modelo = modelo;
+	}
+
+	public String getCategoria() {
+		return categoria;
+	}
+
+	public void setCategoria(String categoria) {
+		this.categoria = categoria;
+	}
+
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
+
 	public String getTelefone() {
 		return telefone;
 	}
@@ -98,18 +116,41 @@ public class Projeto implements Serializable {
 		this.email = email;
 	}
 
-	/*
-	 * public String getEndereco() { return endereco; }
-	 * 
-	 * public void setEndereco(String endereco) { this.endereco = endereco; }
-	 * 
-	 * public String getCidade() { return cidade; }
-	 * 
-	 * public void setCidade(String cidade) { this.cidade = cidade; }
-	 * 
-	 * public String getEstado() { return estado; }
-	 * 
-	 * public void setEstado(String estado) { this.estado = estado; }
-	 */
+	public String getEndereco() {
+		return endereco;
+	}
 
+	public void setEndereco(String endereco) {
+		this.endereco = endereco;
+	}
+
+	public String getCidade() {
+		return cidade;
+	}
+
+	public void setCidade(String cidade) {
+		this.cidade = cidade;
+	}
+
+	public String getEstado() {
+		return estado;
+	}
+
+	public void setEstado(String estado) {
+		this.estado = estado;
+	}
+
+	
+	public long getCodigo() {
+		return codigo;
+	}
+
+	public void setCodigo(long codigo) {
+		this.codigo = codigo;
+	}
+	/*
+	 * public Entidade getEntidade() { return entidade; }
+	 * 
+	 * public void setEntidade(Entidade entidade) { this.entidade = entidade; }
+	 */
 }
